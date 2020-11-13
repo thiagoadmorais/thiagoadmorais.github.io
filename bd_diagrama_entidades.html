@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Diagrama de Entidades</title>
+	</head>
+	<style>
+		 header, footer
+        {
+            font-size: 30px;    
+            text-align: center;    
+            padding: 0.3em 0;    
+            background-color: #292929;    
+            color: rgb(4, 126, 51);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			font-weight: bold;
+        }
+		
+		h1 {
+            background-color: forestgreen;
+            font-family: 'Lobster', cursive;
+            text-align: center;
+            line-height: 3.2;   				
+        }
+		
+		h2 {
+			background-color: white;
+            font-family: 'Lobster', cursive;
+            text-align: center;
+            line-height: 1.8;    
+        }
+		
+		body {
+			background-color:#DAF7A6;
+			margin: 0;
+            line-height: 1.8;       
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifs;
+            border: thick  groove  #3F0;   
+		}
+		
+		.navbar {
+			overflow: hidden;
+			background-color: #333;
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+
+		.navbar a {
+			float: left;
+			display: block;
+		    color: #f2f2f2;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		    font-size: 17px;
+		}
+
+		.navbar a:hover {
+		background: #ddd;
+		color: black;
+		}
+		
+		#format_table {
+		font-family: Arial, Helvetica, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		}
+
+		#format_table td, #format_table th {
+		border: 1px solid #ddd;
+		padding: 8px;
+		text-align: left;
+		background-color: #f2f2f2;
+		}
+
+		#format_table th {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: center;
+		background-color: #4CAF50;
+		color: white;
+		}
+		
+		p{
+            text-align: center;
+			font-style: italic			
+        }
+	</style>
+	<body>
+		<div class="navbar">
+			<a href="https://dsetectiverde.000webhostapp.com/PoliticaAmbientalC.html" target="_self">Política Ambiental</a>
+			<a href="https://dsetectiverde.000webhostapp.com/PoliticaCEMIG.html" target="_self">Política CEMIG</a>
+			<a href="https://dsetectiverde.000webhostapp.com/BD%20-%20Diagrama_de_Entidades.html" target="_self">Diagrama de Entidades</a>
+			<a href="https://dsetectiverde.000webhostapp.com/BD%20-%20Dicionario_de_Dados.html" target="_self">Dicionário de Dados</a>
+		</div>	
+		<header>
+			<div>
+				<table>
+					<tr>
+						<td style="width:310px">
+							</br><audio src="Musica/sounds_of_nature.mp3" controls> </audio>
+						</td>
+						<td style="width:1000px";text-align:center;>
+							</br>Projeto Interdisciplinar "TI Verde"</br>1ºA-N DS - Etec de Guarulhos				
+						</td>				
+						<td style="width:310px">
+							</br>
+						</td>				
+					</tr>
+				</table>
+			</div>		
+		</header>				
+		<h1>
+			<div>
+				<img src="Imagens/projeto_ti verde.png" height="100" align="left" />
+				<img src="Imagens/folha_ti verde.png" height="100" align="right" />
+            </div> 
+			Selo "Política Ambiental - TI Verde"			
+		</h1>
+		<table id="format_table">
+			<tr>			
+				<th colspan=4 style="background-color:#f2f2f2;color:black;font-family: 'Lobster', cursive;font-size:24px">
+					Diagrama de Entidades
+				</th>
+			</tr>		
+			<tr>
+				<th>
+					</br>
+					Politica_Ambiental
+						<p>Entidade para os dados que</br>norteiam a atuação da Empresa</br>frente às questões ambientais</p>
+					</br>
+				</th>
+				<th>
+					</br>
+					Estrategia_Ambiental
+						<p>Entidade para os dados de avaliação</br>dos riscos e oportunidades</br>para tomadas de decisões</p>
+					</br>
+				</th>				
+				<th>
+					</br>
+					Gestao_Ambiental
+						<p>Entidade para os dados que suportam o</br>processo decisório e o estabelecimento</br>de procedimentos internos</p>
+					</br>
+				</th>				
+				<th>
+					</br>
+					Requisitos_Legais
+						<p>Entidade para os dados referente</br>ao cumprimento da legislação</br>ambiental vigente</p>
+					</br>
+				</th>				
+			</tr>
+			<tr>						
+				<td>
+					</br>
+					id_politica: número</br>
+					dt_inicio_vigencia_politica: data</br>
+					nu_versao_politica: número</br>
+					dt_revisao_politica: data</br>
+					ds_introducao_politica: texto</br>
+					ds_objetivo_politica: texto</br>
+					ds_aplicacao_politica: texto</br>
+					nm_principios_politica: texto</br>
+					fk_id_estrategia: número</br>
+					fk_id_gestao: número</br>
+					fk_id_requisito_legal: número</br>
+					fk_id_prevencao: número</br>
+					fk_id_melhoria: número</br>
+					fk_id_comunicado: número</br>
+					fk_id_treinamento: número</br>
+					</br></br>
+				</td>
+				<td>
+					</br>
+					id_estrategia: número</br>
+					nm_categoria_estrategia: texto</br>
+					tp_recurso_natural: texto</br>
+					ds_riscos: texto</br>
+					ds_oportunidades: texto</br>
+					ds_decisoes: texto</br>
+					st_estrategia: texto</br>
+					dt_adocao_estrategia: data</br>
+					fk_id_politica: número</br>
+					</br></br>
+				</td>				
+				<td>
+					</br>
+					id_gestao: número</br>
+					nm_area_gestao: texto</br>
+					nm_gestor_area: texto</br>
+					qt_procedimentos_area: número</br>
+					qt_criterios_area: número</br>
+					qt_riscos_ambientais: número</br>
+					fk_id_politica: número</br>
+					</br></br>
+				</td>				
+				<td>
+					</br>
+					id_requisito_legal: número</br>
+					ds_requisito_legal: texto</br>
+					nu_legislacao_vigente: número</br>
+					nm_legislacao_vigente: texto</br>
+					ds_resumo_legislacao: texto</br>
+					nm_orgao_regulador: texto</br>
+					fk_id_politica: número</br>
+					</br></br>
+				</td>				
+			</tr>
+			<tr>
+				<th>
+					</br>
+					Medidas_Prevencao
+						<p>Entidade para os dados referente</br>às medidasde controle visando</br>à prevenção da poluição
+					</br>
+				</th>
+				<th>
+					</br>
+					Acoes_Melhoria
+						<p>Entidade para os dados das ações</br>para aprimorar continuamente</br>o desempenho ambiental
+					</br>
+				</th>				
+				<th>
+					</br>
+					Comunicacao_Ambiental
+						<p>Entidade para os dados de</br>comunicações relacionados às</br>questões ambientais
+					</br>
+				</th>				
+				<th>
+					</br>
+					Educacao_Ambiental
+						<p>Entidade para os dados de</br>treinamentos relacionados às</br>questões ambientais
+					</br>
+				</th>				
+			</tr>
+			<tr>
+				<td>
+					</br>
+					id_prevencao: número</br>
+					tp_medida_prevencao: texto</br>
+					tp_impacto_ambiental: texto</br>
+					ds_medida_controle: texto</br>
+					st_medida_prevencao texto</br>
+					dt_inicio_prevencao: data</br>
+					dt_fim_prevencao: data</br>
+					fk_id_politica: número</br>
+					</br></br>
+				</td>
+				<td>
+					</br>
+					id_melhoria: número</br>
+					tp_acao_melhoria: texto</br>
+					nm_autor_melhoria: texto</br>
+					nm_area_autor_melhoria: texto</br>
+					nm_resumo_melhoria: texto</br>
+					ds_melhoria: texto</br>
+					st_melhoria: texto</br>
+					dt_inicio_melhoria: data</br>
+					dt_fim_melhoria: data</br>
+					fk_id_politica: número</br>
+					</br></br>
+				</td>				
+				<td>
+					</br>
+					id_comunicado: número</br>
+					tp_comunicacao: texto</br>
+					nm_canal_comunicacao: texto</br>
+					nm_publico_alvo: texto</br>
+					dt_inicio_comunicacao: data</br>
+					dt_fim_comunicacao: data</br>
+					fk_id_politica: número</br>
+					</br></br>
+				</td>				
+				<td>
+					</br>
+					id_treinamento: número</br>
+					nm_categoria: texto</br>
+					tp_treinamento: texto</br>
+					nm_treinamento: texto</br>
+					qt_horas_treinamento: número</br>
+					nm_endereco_treinamento: texto</br>
+					nm_email_login_treinamento: texto</br>
+					nm_senha_treinamento: número</br>
+					fk_id_politica: número</br>
+					</br></br>
+				</td>				
+			</tr>
+		</table>
+		</br>
+		<footer>
+			Alice Moreira, Alícia Lopes, Emilly Sousa, Guilherme Barboza, Gustavo Bezerra e Thiago Morais
+		</footer>
+	</body>
+</html>

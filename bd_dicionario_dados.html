@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Dicionário de Dados</title>
+	</head>
+	<style>
+		 header, footer
+        {
+            font-size: 30px;    
+            text-align: center;    
+            padding: 0.3em 0;    
+            background-color: #292929;    
+            color: rgb(4, 126, 51);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			font-weight: bold;
+        }
+		
+		h1 {
+            background-color: forestgreen;
+            font-family: 'Lobster', cursive;
+            text-align: center;
+            line-height: 3.2;   				
+        }
+		
+		h2 {
+			background-color: white;
+            font-family: 'Lobster', cursive;
+            text-align: center;
+            line-height: 1.8;    
+        }
+		
+		body {
+			background-color:#DAF7A6;
+			margin: 0;
+            line-height: 1.8;       
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifs;
+            border: thick  groove  #3F0;    
+		}
+		
+		.navbar {
+			overflow: hidden;
+			background-color: #333;
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+
+		.navbar a {
+			float: left;
+			display: block;
+		    color: #f2f2f2;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		    font-size: 17px;
+		}
+
+		.navbar a:hover {
+		background: #ddd;
+		color: black;
+		}
+		
+		#format_table {
+		font-family: Arial, Helvetica, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		}
+
+		#format_table td, #format_table th {
+		border: 1px solid #ddd;
+		padding: 8px;
+		}
+
+		#format_table tr:nth-child(even){background-color: #f2f2f2;}
+
+		#format_table tr:hover {background-color: #ddd;}
+
+		#format_table th {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: center;
+		background-color: #4CAF50;
+		color: white;
+		}
+		
+		p{
+            text-align: left;
+			font-style: italic
+			background-color:#f2f2f2						
+        }
+	</style>
+	<body>
+		<div class="navbar">
+			<a href="https://dsetectiverde.000webhostapp.com/PoliticaAmbientalC.html" target="_self">Política Ambiental</a>
+			<a href="https://dsetectiverde.000webhostapp.com/PoliticaCEMIG.html" target="_self">Política CEMIG</a>
+			<a href="https://dsetectiverde.000webhostapp.com/BD%20-%20Diagrama_de_Entidades.html" target="_self">Diagrama de Entidades</a>
+			<a href="https://dsetectiverde.000webhostapp.com/BD%20-%20Dicionario_de_Dados.html" target="_self">Dicionário de Dados</a>
+		</div>	
+		<header>
+			<div>
+				<table>
+					<tr>
+						<td style="width:310px">
+							</br><audio src="Musica/sounds_of_nature.mp3" controls> </audio>
+						</td>
+						<td style="width:1000px";text-align:center;>
+							</br>Projeto Interdisciplinar "TI Verde"</br>1ºA-N DS - Etec de Guarulhos				
+						</td>				
+						<td style="width:310px">
+							</br>
+						</td>				
+					</tr>
+				</table>
+			</div>		
+		</header>				
+		<h1>
+			<div>
+				<img src="Imagens/projeto_ti verde.png" height="100" align="left" />
+				<img src="Imagens/folha_ti verde.png" height="100" align="right" />
+            </div> 
+			Selo "Política Ambiental - TI Verde"			
+		</h1>
+		<table id="format_table">
+			<tr>			
+				<th colspan=6 style="background-color:#f2f2f2;color:black;font-family: 'Lobster', cursive;font-size:25px">
+					Dicionário de Dados
+				</th>
+			</tr>				
+			<tr><th>Atributos "Politica_Ambiental"</th><th>Descrição</th><th>Tipo do dado</th><th>Máscara</th><th>Tamanho</th><th>Restrições</th></tr>
+			<tr><td>id_politica</td><td>Código identificador da Política Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>dt_inicio_vigencia_politica</td><td>Data de início de vigência da Política Ambiental</td><td>data</td><td>Sim --> DD-MM-AAAA</td><td>8</td><td>Not NULL</td></tr>
+			<tr><td>nu_versao_politica</td><td>Número de versão da Política Ambiental</td><td>número</td><td>Sim --> 02.01</td><td>6</td><td>Not NULL</td></tr>
+			<tr><td>dt_revisao_politica</td><td>Data da última revisão da Política Ambiental</td><td>data</td><td>Sim --> DD-MM-AAAA</td><td>8</td><td>Not NULL</td></tr>
+			<tr><td>ds_introducao_politica</td><td>Descrição da Introdução da Política Ambiental</td><td>texto</td><td>N/A.</td><td>255</td><td>Not NULL</td></tr>
+			<tr><td>ds_objetivo_politica</td><td>Descrição do Objetivo da Política Ambiental</td><td>texto</td><td>N/A.</td><td>255</td><td>Not NULL</td></tr>
+			<tr><td>ds_aplicacao_politica</td><td>Descrição da Aplicação da Política Ambiental</td><td>texto</td><td>N/A.</td><td>255</td><td>Not NULL</td></tr>
+			<tr><td>nm_principios_politica</td><td>Nome dos princípios da Política Ambiental</td><td>texto</td><td>N/A.</td><td>120</td><td>Not NULL</td></tr>
+			<tr><td>fk_id_estrategia</td><td>Chave estrangeira de Estratégia Ambiental </td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>fk_id_gestao</td><td>Chave estrangeira de Gestão Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>fk_id_requisito_legal</td><td>Chave estrangeira de Requisitos Legais</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>fk_id_prevencao</td><td>Chave estrangeira de Medidas de Prevenção</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>fk_id_melhoria</td><td>Chave estrangeira de Ações de Melhoria</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>fk_id_comunicado</td><td>Chave estrangeira de Comunicação Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>fk_id_treinamento</td><td>Chave estrangeira de Educação Ambiental </td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+		</table>
+		</br></br>
+		<table id="format_table">
+			<tr><th>Atributos "Estrategia_Ambiental"</th><th>Descrição</th><th>Tipo do dado</th><th>Máscara</th><th>Tamanho</th><th>Restrições</th></tr>
+			<tr><td>id_estrategia</td><td>Código identificador da Estdatégia</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>nm_categoria_estrategia</td><td>Nome de categoria de estdatégia</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>tp_recurso_natural</td><td>Tipo de estdatégia</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>ds_riscos</td><td>Descrição da avaliação dos riscos na tomada de decisões</td><td>texto</td><td>N/A.</td><td>255</td><td>Not NULL</td></tr>
+			<tr><td>ds_oportunidades</td><td>Descrição da avaliação das oportunidades na tomada de decisões</td><td>texto</td><td>N/A.</td><td>255</td><td>Not NULL</td></tr>
+			<tr><td>ds_decisoes</td><td>Descrição da estdatégia</td><td>texto</td><td>N/A.</td><td>255</td><td>Not NULL</td></tr>
+			<tr><td>st_estrategia</td><td>Status da estdatégia</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>dt_adocao_estrategia</td><td>Data de adoção da estdatégia</td><td>data</td><td>Sim --> DD-MM-AAAA</td><td>8</td><td>Not NULL</td></tr>
+			<tr><td>fk_id_politica</td><td>Chave estdangeira de Política Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+		</table>
+		</br></br>
+		<table id="format_table">
+			<tr><th>Atributos "Gestao_Ambiental"</th><th>Descrição</th><th>Tipo do dado</th><th>Máscara</th><th>Tamanho</th><th>Restrições</th></tr>
+			<tr><td>id_gestao</td><td>Código identificador de Gestão Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>nm_area_gestao</td><td>Nome da área de gestão</td><td>texto</td><td>N/A.</td><td>60</td><td>Not NULL</td></tr>
+			<tr><td>nm_gestor_area</td><td>Nome do gestor da área</td><td>texto</td><td>N/A.</td><td>60</td><td>Not NULL</td></tr>
+			<tr><td>qt_procedimentos_area</td><td>Quantidade procedimentos de gestão da área</td><td>número</td><td>N/A.</td><td>6</td><td>Not NULL</td></tr>
+			<tr><td>qt_criterios_area</td><td>Quantidade critérios de gestão da área</td><td>número</td><td>N/A.</td><td>6</td><td>Not NULL</td></tr>
+			<tr><td>qt_riscos_ambientais</td><td>Quantidade riscos de gestão da área</td><td>número</td><td>N/A.</td><td>6</td><td>Not NULL</td></tr>
+			<tr><td>fk_id_politica</td><td>Chave estdangeira de Política Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+		</table>
+		</br></br>
+		<table id="format_table">
+			<tr><th>Atributos "Requisitos_Legais"</th><th>Descrição</th><th>Tipo do dado</th><th>Máscara</th><th>Tamanho</th><th>Restrições</th></tr>
+			<tr><td>id_requisito_legal</td><td>Código identificador de Requisitos Legais</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>ds_requisito_legal</td><td>Descrição do requisito legal</td><td>texto</td><td>N/A.</td><td>255</td><td>Not NULL</td></tr>
+			<tr><td>nu_legislacao_vigente</td><td>Número da legislação vigente</td><td>número</td><td>N/A.</td><td>25</td><td>Not NULL</td></tr>
+			<tr><td>nm_legislacao_vigente</td><td>Nome da legislação vigente</td><td>texto</td><td>N/A.</td><td>120</td><td>Not NULL</td></tr>
+			<tr><td>ds_resumo_legislacao</td><td>Descriação do resumo da legislação</td><td>texto</td><td>N/A.</td><td>120</td><td>Not NULL</td></tr>
+			<tr><td>nm_orgao_regulador</td><td>Nome do orgão regulador</td><td>texto</td><td>N/A.</td><td>60</td><td>Not NULL</td></tr>
+			<tr><td>fk_id_politica</td><td>Chave estdangeira de Política Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+		</table>
+		</br></br>
+		<table id="format_table">
+			<tr><th>Atributos "Medidas_Prevencao"</th><th>Descrição</th><th>Tipo do dado</th><th>Máscara</th><th>Tamanho</th><th>Restrições</th></tr>
+			<tr><td>id_prevencao</td><td>Código identificador de Medidas de Prevenção</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>tp_medida_prevencao</td><td>Tipo de medida de prevenção</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>tp_impacto_ambiental</td><td>Tipo de impacto ambiental</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>ds_medida_controle</td><td>Descrição da medida de contdole de prevenção da poluição</td><td>texto</td><td>N/A.</td><td>255</td><td>Not NULL</td></tr>
+			<tr><td>st_medida_prevencao</td><td>Status da medida de prevenção</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>dt_inicio_prevencao</td><td>Data de início da medida de prevenção</td><td>data</td><td>Sim --> DD-MM-AAAA</td><td>8</td><td>Not NULL</td></tr>
+			<tr><td>dt_fim_prevencao</td><td>Data de fim da medida de prevenção</td><td>data</td><td>Sim --> DD-MM-AAAA</td><td>8</td><td>Not NULL</td></tr>
+			<tr><td>fk_id_politica</td><td>Chave estdangeira de Política Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+		</table>
+		</br></br>
+		<table id="format_table">
+			<tr><th>Atributos "Acoes_Melhoria"</th><th>Descrição</th><th>Tipo do dado</th><th>Máscara</th><th>Tamanho</th><th>Restrições</th></tr>
+			<tr><td>id_melhoria</td><td>Código identificador de Ações de Melhoria</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>tp_acao_melhoria</td><td>Tipo de ação de melhoria</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>nm_autor_melhoria</td><td>Nome do autor da ação de melhoria</td><td>texto</td><td>N/A.</td><td>60</td><td>Not NULL</td></tr>
+			<tr><td>nm_area_autor_melhoria</td><td>Nome da área do autor da ação de melhoria</td><td>texto</td><td>N/A.</td><td>60</td><td>Not NULL</td></tr>
+			<tr><td>nm_resumo_melhoria</td><td>Nome da ação de melhoria</td><td>texto</td><td>N/A.</td><td>120</td><td>Not NULL</td></tr>
+			<tr><td>ds_melhoria</td><td>Descrição da ação de melhoria</td><td>texto</td><td>N/A.</td><td>255</td><td>Not NULL</td></tr>
+			<tr><td>st_melhoria</td><td>Status da ação de melhoria</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>dt_inicio_melhoria</td><td>Data de Início da ação de melhoria</td><td>data</td><td>Sim --> DD-MM-AAAA</td><td>8</td><td>Not NULL</td></tr>
+			<tr><td>dt_fim_melhoria</td><td>Data de fim da ação de melhoria</td><td>data</td><td>Sim --> DD-MM-AAAA</td><td>8</td><td>Not NULL</td></tr>
+			<tr><td>fk_id_politica</td><td>Chave estdangeira de Política Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+		</table>
+		</br></br>
+		<table id="format_table">
+			<tr><th>Atributos "Comunicacao_Ambiental"</th><th>Descrição</th><th>Tipo do dado</th><th>Máscara</th><th>Tamanho</th><th>Restrições</th></tr>
+			<tr><td>id_comunicado</td><td>Código identificador de Comunicação Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>tp_comunicacao</td><td>Tipo de comunicação</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>nm_canal_comunicacao</td><td>Nome do canal utilizado para a comunicação</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>nm_publico_alvo</td><td>Nome do público alvo da comunicação</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>dt_inicio_comunicacao</td><td>Data de início da comunicação</td><td>data</td><td>Sim --> DD-MM-AAAA</td><td>8</td><td>Not NULL</td></tr>
+			<tr><td>dt_fim_comunicacao</td><td>Data de fim da comunicação</td><td>data</td><td>Sim --> DD-MM-AAAA</td><td>8</td><td>Not NULL</td></tr>
+			<tr><td>fk_id_politica</td><td>Chave estdangeira de Política Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+		</table>
+		</br></br>
+		<table id="format_table">
+			<tr><th>Atributos "Educacao_Ambiental"</th><th>Descrição</th><th>Tipo do dado</th><th>Máscara</th><th>Tamanho</th><th>Restrições</th></tr>
+			<tr><td>id_treinamento</td><td>Código identificador de Educação Ambiental </td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+			<tr><td>nm_categoria</td><td>Nome de categoria de tdeinamento</td><td>texto</td><td>N/A.</td><td>15</td><td>Not NULL</td></tr>
+			<tr><td>tp_treinamento</td><td>Tipos de tdeinamento</td><td>texto</td><td>N/A.</td><td>12</td><td>Not NULL</td></tr>
+			<tr><td>nm_treinamento</td><td>Nome do tdeinamento</td><td>texto</td><td>N/A.</td><td>60</td><td>Not NULL</td></tr>
+			<tr><td>qt_horas_treinamento</td><td>Quantidade de horas/duração do tdeinamento</td><td>número</td><td>N/A.</td><td>4</td><td>Not NULL</td></tr>
+			<tr><td>nm_endereco_treinamento</td><td>Nome do endereço (site) para acesso ao tdeinamento</td><td>texto</td><td>Sim --> https://www.sitedotdeinamento.com.br/</td><td>120</td><td>Not NULL</td></tr>
+			<tr><td>nm_email_login_treinamento</td><td>Nome do login para acesso ao tdeinamento</td><td>texto</td><td>Sim --> seuendereco@seudominio.com.br</td><td>60</td><td>Não pode se repetir</td></tr>
+			<tr><td>nm_senha_treinamento</td><td>Nome da senha para acesso ao tdeinamento</td><td>número</td><td>N/A.</td><td>15</td><td>Não pode se repetir</td></tr>
+			<tr><td>fk_id_politica</td><td>Chave estdangeira de Política Ambiental</td><td>número</td><td>N/A.</td><td>6</td><td>Não pode se repetir</td></tr>
+		</table>
+		</br>
+		<footer>
+			Alice Moreira, Alícia Lopes, Emilly Sousa, Guilherme Barboza, Gustavo Bezerra e Thiago Morais
+		</footer>
+	</body>
+</html>
